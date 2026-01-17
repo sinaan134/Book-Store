@@ -1,0 +1,71 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock %}
+    
+    
+{% block content %}
+    <header class="hero-banner text-center">
+        <div class="container">
+            <h1 class="display-2 fw-bold mb-3">Your Next Adventure Awaits</h1>
+            <p class="fs-4 mb-5 text-light-50">"A room without books is like a body without a soul." — Cicero</p>
+            <a href="#shop" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">Start Browsing</a>
+        </div>
+    </header>
+
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Readers Say</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <p class="fst-italic">"The fastest delivery I've ever experienced. The books arrived in perfect condition!"</p>
+                        <h6 class="fw-bold mt-3">— Sarah J.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <p class="fst-italic">"They have rare editions that I couldn't find anywhere else. Truly a gem for collectors."</p>
+                        <h6 class="fw-bold mt-3">— James D.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <p class="fst-italic">"Affordable prices and great customer support. My go-to place for monthly reads."</p>
+                        <h6 class="fw-bold mt-3">— Emily R.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">The Book Haven</h5>
+                    <p class="text-white-50 small">Providing readers with their favorite stories since 2020. We believe every book has a home.</p>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-end">
+                    <h5 class="fw-bold mb-3">Follow Us</h5>
+                    <p class="text-white-50">Instagram | Twitter | Facebook</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="text-center text-white-50 small mb-0">&copy; 2026 The Book Haven. All Rights Reserved.</p>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    {% block extra_css%}{%  endblock %}
+</head>
+<body>
+    <!-- <h2>my name is {{name}}</h2>
+    <h2>i am coming from {{place}}</h2> -->
+
+    <!-- {% for i in a %}
+    {{i}}
+    {% endfor %}
+    <br> -->
+    
+  
+  
+  <nav class="nav justify-content-center  nav-tabs">
+    <ul class="nav justify-content-center  nav-tabs"></ul>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'book' %}">VIEW BOOKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'createbook' %}">ADD BOOKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'reg' %}">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+        </li>
+    </UL>
+   </nav>
+    
+  
+
+{% block content %} {% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+   body { font-family: 'Poppins', sans-serif; }
+        h1, h2, .navbar-brand { font-family: 'Playfair Display', serif; }
+        
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+        }
+
+        .book-card img {
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .badge-sale {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }

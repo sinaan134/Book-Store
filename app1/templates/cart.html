@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cart</h2>
+    <table border="">
+        <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+            <th>BUY</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.book.name}}</td>
+            <td>{{i.book.author}}</td>
+            <td>{{i.book.price}}</td>
+            <td>{{i.quantity}}</td>
+            <td>
+                <a href="{% url 'remove_cart_item' i.id %}">Remove_item</a>
+               
+
+            </td>
+            <td>
+                <a href="{% url 'buy' i.book.id %}">BUY NOW</a>
+                
+
+            </td>
+
+        </tr>
+       
+        {% endfor %}
+    </table>
+
+    {% if data %}
+    <button style="padding: 10px 20px; background-color: green;border-radius: 25px;">
+        <a href="{% url 'buy_all' %}" style="color: white; text-decoration: none;">BUY ALL</a>
+    </button>
+    <button style="padding: 10px 20px; background-color: rgb(159, 25, 25);border-radius: 25px;">
+        <a href="{% url 'remove_all' %}" style="color: white; text-decoration: none;">REMOVE ALL</a>
+    </button>
+{% endif %}
+</body>
+</html>
