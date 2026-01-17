@@ -24,7 +24,7 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def home(request):
     a = ["nihal",21,"malappuram"]
-    return render(request,"home.html",{"a":a})
+    return render(request,"home.html",{"a":a})#home view
 
 def about(request):
     return render(request,"about.html")
